@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">file processing</string>
+    <string name="title">file processing</string>
+    <string name="web_view">Buka dengan webview</string>
+    <string name="assets">Buka dari Assets</string>
+    <string name="storage">Buka dari penyimpanan</string>
+    <string name="internet">Buka dari Internet</string>
+
+</resources>
