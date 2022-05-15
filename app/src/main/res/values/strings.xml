@@ -5,5 +5,6 @@
     <string name="assets">Buka dari Assets</string>
     <string name="storage">Buka dari penyimpanan</string>
     <string name="internet">Buka dari Internet</string>
+    <string name="preparing_for_your">Preparing for your content</string>
 
 </resources>

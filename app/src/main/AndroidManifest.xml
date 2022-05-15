@@ -16,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".WebViewActivity"/>
+        <activity android:name=".PdfViewActivity" />
         <activity android:name=".PdfHandleActivity" />
+        <activity android:name=".VideoHandleActivity" />
+        <activity android:name=".ImageHandleActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

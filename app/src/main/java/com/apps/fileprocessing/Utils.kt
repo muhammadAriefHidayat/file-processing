@@ -6,7 +6,7 @@ import androidx.core.content.ContextCompat
 import java.io.File
 
 object Utils {
-    fun getPdfUrl():String =   "https://kotlinlang.org/assets/kotlin-media-kit.pdf"
+    fun getPdfUrl():String =   "kotlinlang.org/assets/kotlin-media-kit.pdf"
 
     fun getPdfNameFromAssets(): String {
         return "Example_PDF_Kotlin_Wikipedia.pdf"

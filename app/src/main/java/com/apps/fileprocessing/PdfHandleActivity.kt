@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.apps.fileprocessing.databinding.ActivityPdfHandleBinding
 
-class PdfHandleActivity : AppCompatActivity() {
+class   PdfHandleActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPdfHandleBinding
 
