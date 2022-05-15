@@ -16,10 +16,13 @@ import androidx.core.app.ActivityCompat
 import com.apps.fileprocessing.databinding.ActivityImageHandleBinding
 
 class ImageHandleActivity : AppCompatActivity() {
+    // deklare binding
     private lateinit var binding: ActivityImageHandleBinding
 
+    // set code
     private val REQUEST_CODE_PERMISSION = 100
 
+    // set camera
     private val cameraResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -27,6 +30,7 @@ class ImageHandleActivity : AppCompatActivity() {
             }
         }
 
+    // set galrey
     private val galleryResult =
         registerForActivityResult(ActivityResultContracts.GetContent()) { result ->
             binding.ivImage.setImageURI(result)
@@ -37,13 +41,17 @@ class ImageHandleActivity : AppCompatActivity() {
         binding = ActivityImageHandleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //binding
         binding.btnChoose.setOnClickListener {
             //intent to open camera app
             checkingPermissions()
         }
     }
 
+    // meminta user mengijinkan permission
     private fun checkingPermissions() {
+        // isGranted berfungsi untuk meminta user untuk mengijinkan permission kita
+        // di sini kita meminta permission camera, read/write storage
         if (isGranted(
                 this,
                 Manifest.permission.CAMERA,

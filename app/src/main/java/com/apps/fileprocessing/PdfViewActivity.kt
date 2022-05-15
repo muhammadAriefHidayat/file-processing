@@ -25,6 +25,8 @@ class PdfViewActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         checkPdfAction(intent)
+
+        // download  file PDF using URL atau link
         PRDownloader.initialize(applicationContext)
     }
 
@@ -51,6 +53,7 @@ class PdfViewActivity : AppCompatActivity() {
         }
     }
 
+    // fun for get pdf from asset
     private fun showPdfFromAssets(pdfName: String) {
         binding.pdfView.fromAsset(pdfName)
             .password(null) // if password protected, then write password
@@ -64,6 +67,7 @@ class PdfViewActivity : AppCompatActivity() {
             .load()
     }
 
+    // function fir select pdf form local storage
     private fun selectPdfFromStorage() {
         Toast.makeText(this, "selectPDF", Toast.LENGTH_LONG).show()
         val browseStorage = Intent(Intent.ACTION_GET_CONTENT)
@@ -74,6 +78,7 @@ class PdfViewActivity : AppCompatActivity() {
         )
     }
 
+    // set result form storage
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == PDF_SELECTION_CODE && resultCode == Activity.RESULT_OK && data != null) {
@@ -82,6 +87,7 @@ class PdfViewActivity : AppCompatActivity() {
         }
     }
 
+    // show the pdf rom uri
     private fun showPdfFromUri(uri: Uri?) {
         binding.pdfView.fromUri(uri)
             .defaultPage(0)
@@ -89,6 +95,7 @@ class PdfViewActivity : AppCompatActivity() {
             .load()
     }
 
+    // fun for download pdf from internet
     private fun downloadPdfFromInternet(url: String, dirPath: String, fileName: String) {
         PRDownloader.download(
             url,
@@ -115,6 +122,7 @@ class PdfViewActivity : AppCompatActivity() {
             })
     }
 
+    // fungc for show pdf from file
     private fun showPdfFromFile(file: File) {
         binding.pdfView.fromFile(file)
             .password(null)

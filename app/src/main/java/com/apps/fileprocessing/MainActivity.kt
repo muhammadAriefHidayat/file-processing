@@ -13,18 +13,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // apply binding and event
         binding.apply {
             btnPdfHandle.setOnClickListener {
+                //set intent
                 val intent = Intent(this@MainActivity, PdfHandleActivity::class.java)
                 startActivity(intent)
             }
 
             btnImageHandle.setOnClickListener {
+                //set intent
                 val intent = Intent(this@MainActivity, ImageHandleActivity::class.java)
                 startActivity(intent)
             }
 
             btnVideoHandle.setOnClickListener {
+                //set intent
                 val intent = Intent(this@MainActivity, VideoHandleActivity::class.java)
                 startActivity(intent)
             }

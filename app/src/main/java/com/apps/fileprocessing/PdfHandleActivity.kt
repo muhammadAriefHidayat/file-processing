@@ -14,6 +14,7 @@ class   PdfHandleActivity : AppCompatActivity() {
         binding = ActivityPdfHandleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // apply binding and event
         binding.apply {
             buttonWebView.setOnClickListener {
                 val intent = Intent(this@PdfHandleActivity, WebViewActivity::class.java)

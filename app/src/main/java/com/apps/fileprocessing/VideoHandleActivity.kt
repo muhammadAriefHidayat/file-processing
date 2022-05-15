@@ -45,6 +45,7 @@ class VideoHandleActivity : AppCompatActivity() {
         mPlayer!!.prepare()
     }
 
+    // initExoPlayer on start
     override fun onStart() {
         super.onStart()
         if (Util.SDK_INT >= 24) {
@@ -52,6 +53,7 @@ class VideoHandleActivity : AppCompatActivity() {
         }
     }
 
+    //initExoPlayer on resume
     override fun onResume() {
         super.onResume()
         if (Util.SDK_INT < 24 || mPlayer == null) {
@@ -59,6 +61,7 @@ class VideoHandleActivity : AppCompatActivity() {
         }
     }
 
+    // release player on pause
     override fun onPause() {
         super.onPause()
         if (Util.SDK_INT < 24) {
@@ -66,6 +69,7 @@ class VideoHandleActivity : AppCompatActivity() {
         }
     }
 
+    // relase playre on stop
     override fun onStop() {
         super.onStop()
         if (Util.SDK_INT >= 24) {
@@ -73,6 +77,8 @@ class VideoHandleActivity : AppCompatActivity() {
         }
     }
 
+
+    // fun for release player
     private fun releasePlayer() {
         if (mPlayer == null) {
             return
