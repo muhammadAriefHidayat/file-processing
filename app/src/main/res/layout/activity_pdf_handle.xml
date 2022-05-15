@@ -2,53 +2,64 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".PdfHandleActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_margin="24dp"
+        android:layout_margin="8dp"
         android:gravity="center"
-        android:text="@string/title"
+        android:text="Handle PDF"
         android:textColor="@color/black"
         android:textSize="32sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnPdfHandle"
+        android:id="@+id/buttonWebView"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_margin="8dp"
         android:background="@drawable/btn_round_bg"
-        android:text="Handle PDF"
+        android:text="@string/web_view"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textSize="@dimen/space_20" />
+
 
     <Button
-        android:id="@+id/btnImageHandle"
+        android:id="@+id/buttonAssets"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_margin="8dp"
         android:background="@drawable/btn_round_bg"
-        android:text="Handle Image"
+        android:text="@string/assets"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textSize="20sp" />
 
     <Button
-        android:id="@+id/btnVideoHandle"
+        android:id="@+id/buttonStorage"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_margin="8dp"
         android:background="@drawable/btn_round_bg"
-        android:text="Handle Video"
+        android:text="@string/storage"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonInternet"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/btn_round_bg"
+        android:baselineAligned="false"
+        android:text="@string/internet"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
